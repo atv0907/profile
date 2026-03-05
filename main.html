@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adrian Yip – Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg-dark: #f5f4f0;
+      --fg-light: #1a1a1a;
+      --matrix-green: #1a3a6b;
+      --fg-dim: #555;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      padding: 0 10px;
+      margin: 50px auto;
+      max-width: 650px;
+      background-color: var(--bg-dark);
+      color: var(--fg-light);
+      font-family:
+        "SF Mono", "SFMono-Regular", ui-monospace,
+        Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #maincontent {
+      max-width: 42em;
+      margin: 15px auto;
+      margin-top: 70px;
+    }
+
+    h1 {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 2px;
+      color: var(--fg-light);
+    }
+
+    .contact {
+      color: var(--fg-dim);
+      margin-bottom: 20px;
+      font-size: 0.8rem;
+    }
+
+    .contact a {
+      color: var(--matrix-green);
+      text-decoration: none;
+    }
+
+    .contact a:hover,
+    .contact a:focus {
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--matrix-green);
+      margin-top: 28px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #d0cfc9;
+      padding-bottom: 4px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      color: var(--fg-light);
+    }
+
+    .job {
+      margin-bottom: 20px;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .job-title {
+      font-weight: bold;
+      color: var(--fg-light);
+    }
+
+    .job-date {
+      color: var(--fg-dim);
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    .job-company {
+      color: var(--fg-dim);
+      font-size: 0.82rem;
+      margin-bottom: 6px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding-left: 1.2em;
+      position: relative;
+      margin-bottom: 5px;
+      color: var(--fg-light);
+    }
+
+    ul li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: var(--matrix-green);
+    }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .edu-title {
+      font-weight: bold;
+    }
+
+    .edu-date {
+      color: var(--fg-dim);
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    .edu-school {
+      color: var(--fg-dim);
+      font-size: 0.82rem;
+      margin-top: 2px;
+    }
+
+    .cert-item {
+      margin-bottom: 4px;
+    }
+
+    .skills-list {
+      color: var(--fg-light);
+      line-height: 1.7;
+    }
+
+    .skills-list span {
+      display: inline-block;
+      margin-right: 4px;
+    }
+
+    .skills-list span::after {
+      content: " ·";
+      color: var(--matrix-green);
+    }
+
+    .skills-list span:last-child::after {
+      content: "";
+    }
+
+    .features-toggle {
+      margin-top: 8px;
+    }
+
+    .features-toggle summary.feature-label {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      user-select: none;
+    }
+
+    .features-toggle summary.feature-label::before {
+      content: "▶";
+      font-size: 0.6rem;
+      color: var(--matrix-green);
+      transition: transform 0.2s ease;
+      display: inline-block;
+    }
+
+    .features-toggle[open] summary.feature-label::before {
+      transform: rotate(90deg);
+    }
+
+    .features-toggle summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .features-body {
+      margin-top: 8px;
+    }
+
+    .feature-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--fg-dim);
+      margin-bottom: 6px;
+    }
+
+    .feature {
+      margin-bottom: 5px;
+      padding-left: 1em;
+      border-left: 2px solid var(--matrix-green);
+      color: var(--fg-light);
+    }
+
+    .feature-name {
+      font-weight: bold;
+      margin-right: 6px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 14px;
+      border-top: 1px solid #d0cfc9;
+    }
+
+    footer small {
+      color: var(--fg-dim);
+      font-size: 0.78rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="maincontent">
+
+    <h1>Adrian Yip</h1>
+    <div class="contact">
+      <a href="/cdn-cgi/l/email-protection#771613051e1619040f0e1e0737101a161e1b5914181a"><span class="__cf_email__" data-cfemail="8cede8fee5ede2fff4f5e5fcccebe1ede5e0a2efe3e1">[email&#160;protected]</span></a>
+      &nbsp;|&nbsp;
+      <a href="https://www.linkedin.com/in/adrian-yip-4b0b9a1b1" target="_blank">LinkedIn</a>
+    </div>
+
+    <h2>Summary</h2>
+    <p>
+      Cybersecurity analyst and GRC leader with 5+ years of experience designing, automating and
+      implementing GRC and compliance programs. Specialized in data integration and AI-centric
+      enhancements. Passionate in adopting new and emerging technologies to efficiently and
+      creatively solve security challenges.
+    </p>
+
+    <h2>Projects &amp; Research</h2>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Passive Vulnerability Management System</span>
+      </div>
+      <div class="job-company">Capstone Project – Sheridan College</div>
+      <p style="margin-top: 6px; margin-bottom: 10px; font-size: 0.78rem; color: var(--fg-dim);">
+        Designed and developed a passive vulnerability detection and management platform that identifies software vulnerabilities without the need for resource-heavy, disruptive active scans. The system imports software inventory data from Windows and Linux machines, then uses advanced string matching algorithms (Ratcliff/Obershelp) to accurately map software to Common Platform Enumeration (CPE) identifiers.
+      </p>
+      <details class="features-toggle">
+        <summary class="feature-label">Key Features</summary>
+        <div class="features-body">
+          <div class="feature"><span class="feature-name">High-Accuracy Matching</span> Achieved 100% accuracy in controlled testing with known vulnerable software such as Google Chrome, Apache Log4j, MySQL, and Adobe Flash Player.</div>
+          <div class="feature"><span class="feature-name">Lightweight Operation</span> Eliminates the performance impact of active vulnerability scanning, making it ideal for large-scale or sensitive environments.</div>
+          <div class="feature"><span class="feature-name">Scalable Architecture</span> Supports importing inventory data from multiple systems and can be extended to integrate with ticketing systems like JIRA and real-time alerting tools.</div>
+        </div>
+      </details>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Self Hosted Compliance Automation</span>
+      </div>
+      <div class="job-company">Client Project – Confidential Client</div>
+      <p style="margin-top: 6px; margin-bottom: 10px; font-size: 0.78rem; color: var(--fg-dim);">
+        Designed, developed and deployed automated workflows for collecting compliance data for SMB (small and medium businesses) to assist with audit preparation. The application leverages scheduled API calls, webhooks and custom scripts to either pull compliance data from third party platforms or execute compliance routines on cloud instances. The application is deployed and maintained using n8n and Azure.
+      </p>
+      <details class="features-toggle">
+        <summary class="feature-label">Key Features</summary>
+        <div class="features-body">
+          <div class="feature"><span class="feature-name">Automated Data Aggregation</span> Scheduled and triggered routines to grab compliance data such as User, VM and Container Data from Azure using Microsoft Graph API. Custom scripts to pull asset inventory for on-prem hardware. Pulling data from third party platforms like BambooHR for employee auditing.</div>
+          <div class="feature"><span class="feature-name">AI Content Revision</span> Pushed data through AI agent pipelines to read and verify data and look for non-compliance. AI models returned findings as a summarized report delivered via email.</div>
+        </div>
+      </details>
+    </div>
+
+    <h2>Work Experience</h2>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Sr. Security Design Analyst</span>
+        <span class="job-date">July 2024 – Present</span>
+      </div>
+      <div class="job-company">Deloitte, Toronto, ON</div>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Security Product Owner (GRC Program Lead)</span>
+        <span class="job-date">October 2023 – July 2024</span>
+      </div>
+      <div class="job-company">Oppos Inc, Toronto, ON</div>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Security Analyst</span>
+        <span class="job-date">December 2020 – October 2023</span>
+      </div>
+      <div class="job-company">Oppos Inc, Toronto, ON</div>
+    </div>
+
+    <h2>Education</h2>
+    <div class="edu-header">
+      <span class="edu-title">Information Systems Security – Honours Bachelor of Applied Information Sciences</span>
+      <span class="edu-date">September 2018 – September 2022</span>
+    </div>
+    <div class="edu-school">Sheridan College, Oakville, ON</div>
+
+    <h2>Certifications</h2>
+    <div class="cert-item">SEC 488 – Cloud Security Essentials <span style="color:var(--fg-dim)">(SANS · May 2025)</span></div>
+    <div class="cert-item">CC – Certified in Cybersecurity <span style="color:var(--fg-dim)">(ISC2 · April 2024)</span></div>
+    <div class="cert-item">Cloud Architect – Cybersecurity Specialist <span style="color:var(--fg-dim)">(AWS Educate · December 2022)</span></div>
+
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span>GRC</span>
+      <span>Python</span>
+      <span>AI System Design</span>
+      <span>n8n</span>
+      <span>AI Agents</span>
+      <span>Secureframe</span>
+      <span>Drata</span>
+      <span>Vanta</span>
+      <span>ServiceNow</span>
+      <span>Java</span>
+      <span>Agile</span>
+      <span>Risk Assessment</span>
+      <span>Incident Response</span>
+      <span>Security Policies &amp; Controls</span>
+      <span>JIRA</span>
+      <span>Snyk</span>
+      <span>GitHub</span>
+      <span>Third Party Risk Assessment</span>
+      <span>Data Analysis</span>
+      <span>Vulnerability Management</span>
+      <span>Secur
