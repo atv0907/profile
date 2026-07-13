@@ -173,6 +173,20 @@
       content: "";
     }
 
+    .skill-cat {
+      font-weight: bold;
+      color: var(--fg-dim);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 10px;
+      margin-bottom: 2px;
+    }
+
+    .skill-cat:first-of-type {
+      margin-top: 0;
+    }
+
     .features-toggle {
       margin-top: 8px;
     }
@@ -243,19 +257,38 @@
 
     <h1>Adrian Yip</h1>
     <div class="contact">
-      <a href="adriansxyip@gmail.com" target="_blank">adriansxyip@gmail.com</a>
-      <a href="https://www.linkedin.com/in/adrian-yip-4b0b9a1b1" target="_blank">LinkedIn</a>
+      <a href="mailto:adriansxyip@gmail.com">adriansxyip@gmail.com</a>
+      <a href="https://www.linkedin.com/in/adriansxyip/" target="_blank">LinkedIn</a>
+      <a href="https://atv0907.github.io/profile/" target="_blank">Website</a>
     </div>
 
     <h2>Summary</h2>
     <p>
-      Cybersecurity analyst and GRC leader with 5+ years of experience designing, automating and
-      implementing GRC and compliance programs. Specialized in data integration and AI-centric
-      enhancements. Passionate in adopting new and emerging technologies to efficiently and
-      creatively solve security challenges.
+      GRC leader with 6 years architecting, automating and implementing compliance programs across
+      SOC 2, ISO, PCI-DSS, and NIST. Specialized in continuous control validation with deep
+      experience leveraging AI for audit. Fluent with SSDLC and managing complex compliance
+      workflows with engineering teams.
     </p>
 
     <h2>Projects &amp; Research</h2>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Agentic GRC: Continuous Control Assurance</span>
+      </div>
+      <div class="job-company">Personal Project – <a href="https://github.com/atv0907/Agentic-Security-GRC" target="_blank" style="color: var(--matrix-green); text-decoration: none;">GitHub</a></div>
+      <p style="margin-top: 6px; margin-bottom: 10px; font-size: 0.78rem; color: var(--fg-dim);">
+        A GRC workflow with an AI framework for agents in audit work, designed for trust over audit to prevent specification gaming. Maps compliance controls into a graph and drives risk-tiered continuous control validation with provenance-chained evidence.
+      </p>
+      <details class="features-toggle">
+        <summary class="feature-label">Key Features</summary>
+        <div class="features-body">
+          <div class="feature"><span class="feature-name">Trust-Oriented Agent Framework</span> AI framework for agents in audit work with a HITL decision matrix, evidence maturity scoring, and agent objectives framed for trust over audit to prevent specification gaming.</div>
+          <div class="feature"><span class="feature-name">Graph-Based Control Mapping</span> Mapped 1,467 SCF controls across 6 frameworks in a Neo4j graph, with policy assertions compiled into policy-as-code linked to Information Security policies embedded in ChromaDB.</div>
+          <div class="feature"><span class="feature-name">Provenance-Chained Validation</span> Risk-tiered continuous control validation cadence with provenance-chained evidence nodes that fail stale or missing evidence which would otherwise pass silently.</div>
+        </div>
+      </details>
+    </div>
 
     <div class="job">
       <div class="job-header">
@@ -296,32 +329,57 @@
 
     <div class="job">
       <div class="job-header">
-        <span class="job-title">Sr. Security Design Analyst</span>
+        <span class="job-title">Sr. Security Design Consultant</span>
         <span class="job-date">July 2024 – Present</span>
       </div>
       <div class="job-company">Deloitte, Toronto, ON</div>
+      <ul>
+        <li>Led and managed a team of 5 to accelerate SSDLC reviews by building AI agents for a continuous control assurance pipeline using Copilot Studio and ServiceNow GRC, cutting review times by over 40% servicing 500+ production applications across multi-framework compliance portfolios.</li>
+        <li>Contributed to the development of a new control framework, requirements, and policy-as-code for governing AI agents and LLMs operating within Deloitte infrastructure.</li>
+        <li>Reviewed, approved, and remediated issues with engineering and cloud teams for infrastructure, code change releases through CI/CD pipelines, and architecture updates for 40+ applications.</li>
+      </ul>
     </div>
 
     <div class="job">
       <div class="job-header">
-        <span class="job-title">Security Product Owner (GRC Program Lead)</span>
+        <span class="job-title">Security Product Owner</span>
         <span class="job-date">October 2023 – July 2024</span>
       </div>
       <div class="job-company">Oppos Inc, Toronto, ON</div>
+      <ul>
+        <li>Spearheaded design and implementation efforts to build a GRC software solution that used RAG for questionnaire and policy generation and automated control auditing to reduce manual work by 60%.</li>
+        <li>Project managed, led scrum &amp; development efforts, and performed SME tasks to produce a software MVP within 4 months that received seed funding from Morgan Stanley, Google, and DMZ startup programs.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Security GRC Lead (concurrent with Product Owner)</span>
+        <span class="job-date">January 2022 – July 2024</span>
+      </div>
+      <div class="job-company">Oppos Inc, Toronto, ON</div>
+      <ul>
+        <li>Led and managed GRC programs for cybersecurity frameworks such as PCI-DSS, SOC 2, HIPAA, GDPR, ISO 27001, and NIST CSF across startup, public, financial, and healthcare organizations.</li>
+        <li>Mapped multiple compliance frameworks using proprietary control definitions and early RAG/BERT.</li>
+      </ul>
     </div>
 
     <div class="job">
       <div class="job-header">
         <span class="job-title">Security Analyst</span>
-        <span class="job-date">December 2020 – October 2023</span>
+        <span class="job-date">September 2020 – January 2022</span>
       </div>
       <div class="job-company">Oppos Inc, Toronto, ON</div>
+      <ul>
+        <li>Performed cloud hardening and remediation on AWS/Azure/GCP environments, and implemented automated control assurance with AWS Config, Azure Policy, IaC Checkov, and Python scripts.</li>
+        <li>Wrote documentation and reports for engineering, devops, and leadership teams throughout the audit process, converting audit criteria into actionable tasks and guidelines for all audiences.</li>
+      </ul>
     </div>
 
     <h2>Education</h2>
     <div class="edu-header">
-      <span class="edu-title">Information Systems Security – Honours Bachelor of Applied Information Sciences</span>
-      <span class="edu-date">September 2018 – September 2022</span>
+      <span class="edu-title">Honours Bachelor of Information Sciences (Cyber Security)</span>
+      <span class="edu-date">September 2018 – 2022</span>
     </div>
     <div class="edu-school">Sheridan College, Oakville, ON</div>
 
@@ -331,25 +389,32 @@
     <div class="cert-item">Cloud Architect – Cybersecurity Specialist <span style="color:var(--fg-dim)">(AWS Educate · December 2022)</span></div>
 
     <h2>Skills</h2>
+    <div class="skill-cat">Domain</div>
     <div class="skills-list">
       <span>GRC</span>
+      <span>TPRM</span>
+      <span>Risk Assessment</span>
+      <span>Vulnerability Management</span>
+      <span>Secure Software Development</span>
+    </div>
+
+    <div class="skill-cat">Technical</div>
+    <div class="skills-list">
       <span>Python</span>
-      <span>AI System Design</span>
-      <span>n8n</span>
-      <span>AI Agents</span>
+      <span>Terraform</span>
+      <span>Checkov</span>
       <span>Secureframe</span>
       <span>Drata</span>
       <span>Vanta</span>
       <span>ServiceNow</span>
-      <span>Java</span>
-      <span>Agile</span>
-      <span>Risk Assessment</span>
-      <span>Incident Response</span>
-      <span>Security Policies &amp; Controls</span>
-      <span>JIRA</span>
-      <span>Snyk</span>
       <span>GitHub</span>
-      <span>Third Party Risk Assessment</span>
-      <span>Data Analysis</span>
-      <span>Vulnerability Management</span>
-      <span>Secur
+      <span>Claude Code</span>
+    </div>
+
+    <footer>
+      <small>Last updated July 2026 · Built as a static page.</small>
+    </footer>
+
+  </div>
+</body>
+</html>
